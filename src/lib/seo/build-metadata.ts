@@ -47,12 +47,9 @@ export function buildMetadata(): Metadata {
           },
         }
       : { index: false, follow: false },
-    verification: {
-      ...(env.verification.google ? { google: env.verification.google } : {}),
-      ...(env.verification.bing
-        ? { other: { "msvalidate.01": env.verification.bing } }
-        : {}),
-    },
+    ...(env.googleSiteVerification
+      ? { verification: { google: env.googleSiteVerification } }
+      : {}),
   };
 }
 

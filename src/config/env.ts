@@ -23,8 +23,6 @@ export const env = {
   /** Only the production deployment should be indexed; previews get noindex. */
   isIndexable:
     !process.env.VERCEL_ENV || process.env.VERCEL_ENV === "production",
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-    bing: process.env.BING_SITE_VERIFICATION,
-  },
+  /** Google Search Console ownership token; omitted from the page when unset. */
+  googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION,
 } as const;
