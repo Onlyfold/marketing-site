@@ -1,0 +1,23 @@
+@theme {
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Fades both ends of the marquee so logos glide in and out. */
+@utility mask-fade-x {
+  mask-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 1) 10%,
+    rgb(0 0 0 / 1) 90%,
+    rgb(0 0 0 / 0) 100%
+  );
+}

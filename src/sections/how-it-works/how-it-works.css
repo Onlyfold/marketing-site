@@ -1,0 +1,37 @@
+@theme {
+  /* Connector arrows between process steps: horizontal on desktop, vertical on mobile */
+  --animate-connector-x: connector-x 1.5s infinite ease-in-out;
+  --animate-connector-y: connector-y 1.5s infinite ease-in-out;
+
+  @keyframes connector-x {
+    0%,
+    100% {
+      transform: translate(-5px, -50%);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(5px, -50%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes connector-y {
+    0%,
+    100% {
+      transform: translate(-50%, -5px) rotate(90deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-50%, 5px) rotate(90deg);
+      opacity: 1;
+    }
+  }
+}
+
+@utility bg-gradient-how-it-works {
+  background-image: linear-gradient(
+    145deg,
+    var(--color-agentic-purple) 4%,
+    var(--color-deep-navy) 89%
+  );
+}

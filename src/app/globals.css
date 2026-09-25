@@ -1,0 +1,18 @@
+/* Layer order first: later layers win, so base must sit below utilities. */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+/* Preflight is deliberately omitted — see src/styles/base.css */
+
+@import "../styles/theme.css";
+@import "../styles/base.css";
+@import "../styles/utilities.css";
+
+/* Section-owned styles (keyframes and utilities Tailwind cannot express inline) */
+@import "../layout/site-footer/site-footer.css";
+@import "../sections/trusted-by/trusted-by.css";
+@import "../sections/how-it-works/how-it-works.css";
+@import "../sections/integrations/integrations.css";
+@import "../sections/roi-calculator/roi-calculator.css";
+@import "../sections/closing-cta/closing-cta.css";

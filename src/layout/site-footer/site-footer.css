@@ -1,0 +1,8 @@
+@utility bg-gradient-footer-divider {
+  background-image: linear-gradient(
+    to right,
+    var(--color-line-cyan),
+    var(--color-line-blue),
+    var(--color-glow-purple)
+  );
+}

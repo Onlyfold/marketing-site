@@ -1,0 +1,29 @@
+/*
+ * Global custom variants and utilities. Section-specific utilities live next to
+ * their section (see src/sections/<name>/<name>.css).
+ */
+
+/* Inclusive max-width variants matching the design's `@media (max-width: Npx)` rules.
+   Tailwind's built-in `max-md:` is exclusive (< 48rem) and would differ at exactly 768px. */
+/* Declared widest first: Tailwind emits variants in declaration order, so the
+   narrowest breakpoint is emitted last and wins when several apply. */
+@custom-variant below-lg (@media (width <= 64rem));
+@custom-variant below-calc (@media (width <= 56.25rem));
+@custom-variant below-md (@media (width <= 48rem));
+@custom-variant below-xs (@media (width <= 30rem));
+
+@utility bg-gradient-brand-3 {
+  background-image: var(--gradient-brand-3);
+}
+
+@utility bg-gradient-brand-4 {
+  background-image: var(--gradient-brand-4);
+}
+
+@utility text-gradient-brand {
+  background-image: var(--gradient-text-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

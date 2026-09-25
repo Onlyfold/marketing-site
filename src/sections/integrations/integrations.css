@@ -1,0 +1,26 @@
+@theme {
+  /* Rings rotate; satellites counter-rotate at the same speed to stay upright. */
+  --animate-orbit-inner: orbit 15s linear infinite;
+  --animate-orbit-inner-reverse: orbit 15s linear infinite reverse;
+  --animate-orbit-middle: orbit 25s linear infinite;
+  --animate-orbit-middle-reverse: orbit 25s linear infinite reverse;
+  --animate-orbit-outer: orbit 35s linear infinite;
+  --animate-orbit-outer-reverse: orbit 35s linear infinite reverse;
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@utility bg-gradient-integrations {
+  background-image: linear-gradient(
+    145deg,
+    var(--color-indigo-vivid) 0%,
+    var(--color-black) 100%
+  );
+}
