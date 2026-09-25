@@ -1,23 +1,19 @@
 "use client";
 
-import { ReactLenis, type LenisRef } from "lenis/react";
-import { useEffect, useRef, type ReactNode } from "react";
+import { ReactLenis, useLenis } from "lenis/react";
+import { useEffect, type ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { gsap, ScrollTrigger } from "@/lib/animations/gsap";
 
 /**
- * Lenis smooth scrolling driven by GSAP's ticker so ScrollTrigger reveals stay
- * in sync with the interpolated scroll position.
+ * Drives Lenis from GSAP's ticker so ScrollTrigger reveals stay in sync with the
+ * interpolated scroll position. Rendered inside <ReactLenis>, because the instance
+ * is only available through context once Lenis has been created.
  */
-export function SmoothScrollProvider({
-  children,
-}: {
-  readonly children: ReactNode;
-}) {
-  const lenisRef = useRef<LenisRef>(null);
+function GsapScrollBridge() {
+  const lenis = useLenis();
 
   useEffect(() => {
-    const lenis = lenisRef.current?.lenis;
     if (!lenis) return;
 
     const tick = (time: number) => lenis.raf(time * 1000);
@@ -29,14 +25,20 @@ export function SmoothScrollProvider({
       lenis.off("scroll", ScrollTrigger.update);
       gsap.ticker.remove(tick);
     };
-  }, []);
+  }, [lenis]);
 
+  return null;
+}
+
+/** Lenis smooth scrolling for the whole document. */
+export function SmoothScrollProvider({
+  children,
+}: {
+  readonly children: ReactNode;
+}) {
   return (
-    <ReactLenis
-      root
-      ref={lenisRef}
-      options={{ ...siteConfig.smoothScroll, autoRaf: false }}
-    >
+    <ReactLenis root options={{ ...siteConfig.smoothScroll, autoRaf: false }}>
+      <GsapScrollBridge />
       {children}
     </ReactLenis>
   );
