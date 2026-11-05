@@ -11,7 +11,7 @@ export const closingCtaContent = {
   } satisfies CtaContent,
   trustBadges: [
     "Official Meta API",
-    "Zero Ban Risk",
+    "Policy-aware messaging",
     "Complete Done-For-You Setup",
   ],
 } as const;

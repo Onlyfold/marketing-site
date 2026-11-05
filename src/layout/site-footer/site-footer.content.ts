@@ -56,7 +56,8 @@ export const footerLinkGroups: readonly LinkGroup[] = [
     links: [
       { label: "Support", href: "#" },
       { label: "Contact Us", href: "#" },
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: siteConfig.links.privacy },
+      { label: "Data Deletion", href: siteConfig.links.dataDeletion },
       { label: "API Documentation", href: "#" },
     ],
   },
@@ -65,7 +66,7 @@ export const footerLinkGroups: readonly LinkGroup[] = [
     heading: "COMPANY",
     links: [
       { label: "About Us", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Terms of Service", href: siteConfig.links.terms },
       { label: "Careers", href: "#" },
       { label: "Blog", href: "#" },
     ],

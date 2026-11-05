@@ -3,7 +3,7 @@
  * environment assumptions are easy to audit.
  */
 
-const FALLBACK_SITE_URL = "https://onlyfold-website-v3.vercel.app";
+const FALLBACK_SITE_URL = "https://onlyfold.com";
 
 function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;

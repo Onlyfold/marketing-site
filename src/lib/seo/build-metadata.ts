@@ -2,14 +2,25 @@ import type { Metadata, Viewport } from "next";
 import { env } from "@/config/env";
 import { siteConfig } from "@/config/site";
 
-/** Root metadata. Route-level image files (opengraph-image, icon) are picked up automatically. */
-export function buildMetadata(): Metadata {
-  const { name, title, description, seo, locale } = siteConfig;
+export interface MetadataOptions {
+  readonly title?: string;
+  readonly description?: string;
+  readonly path?: `/${string}`;
+}
+
+/** Root or route metadata. Route-level image files (opengraph-image, icon) are picked up automatically. */
+export function buildMetadata(options?: MetadataOptions): Metadata {
+  const { name, seo, locale } = siteConfig;
+  const pageTitle = options?.title ?? siteConfig.title;
+  const pageDescription = options?.description ?? siteConfig.description;
+  const canonicalPath = options?.path ?? "/";
 
   return {
     metadataBase: new URL(siteConfig.url),
-    title: { default: title, template: `%s | ${name}` },
-    description,
+    title: options?.title
+      ? { default: options.title, template: `%s | ${name}` }
+      : { default: siteConfig.title, template: `%s | ${name}` },
+    description: pageDescription,
     applicationName: name,
     keywords: [...seo.keywords],
     authors: [{ name, url: siteConfig.url }],
@@ -17,19 +28,19 @@ export function buildMetadata(): Metadata {
     publisher: name,
     category: "technology",
     formatDetection: { telephone: false },
-    alternates: { canonical: "/" },
+    alternates: { canonical: canonicalPath },
     openGraph: {
       type: "website",
       locale,
-      url: "/",
+      url: canonicalPath,
       siteName: name,
-      title,
-      description,
+      title: pageTitle,
+      description: pageDescription,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: pageTitle,
+      description: pageDescription,
       ...(seo.twitterHandle
         ? { site: seo.twitterHandle, creator: seo.twitterHandle }
         : {}),

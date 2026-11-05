@@ -26,6 +26,9 @@ export const siteConfig = {
     trial: "#trial",
     pricing: "#pricing",
     reviews: "#reviews",
+    privacy: "/privacy",
+    terms: "/terms",
+    dataDeletion: "/data-deletion",
   } satisfies Record<string, Href>,
 
   video: {

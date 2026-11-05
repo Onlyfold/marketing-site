@@ -14,7 +14,7 @@ export const faqContent = {
     {
       question: "Will all this follow-up get my WhatsApp number banned?",
       answer:
-        "No. Onlyfold runs on the official WhatsApp Business API as a verified partner. Every message is sent through approved, compliant channels so your number stays safe while the system follows up.",
+        "Onlyfold is built on Meta's official WhatsApp Business Platform where applicable. Message delivery and account status depend on Meta's policies, user consent, message quality, template approval, and the customer's account standing. No provider can guarantee that an account will never be restricted or banned.",
     },
     {
       question: "Do I need any technical skills to set this up?",
