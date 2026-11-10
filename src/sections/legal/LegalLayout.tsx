@@ -100,6 +100,19 @@ export function LegalLayout({ content }: LegalLayoutProps) {
                 </div>
               )}
 
+              {section.link && (
+                <p className="mt-4 text-base leading-relaxed text-text-grey">
+                  {section.link.prefix}
+                  <Link
+                    href={section.link.href}
+                    className="font-semibold text-electric-blue hover:underline"
+                  >
+                    {section.link.label}
+                  </Link>
+                  {section.link.suffix}
+                </p>
+              )}
+
               {section.note && (
                 <div className="mt-4 rounded-lg border border-light-grey bg-surface p-4 text-sm text-text-grey italic">
                   {section.note}

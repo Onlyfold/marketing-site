@@ -8,7 +8,7 @@ export const termsContent: LegalPageContent = {
   metaDescription:
     "Review the Terms of Service governing the use of OnlyFold AI's WhatsApp automation, lead qualification, and CRM integration platform.",
   effectiveDate: "November 5, 2026",
-  lastUpdated: "November 5, 2026",
+  lastUpdated: "November 11, 2026",
   backLink: {
     label: "← Back to Onlyfold",
     href: siteConfig.links.home,
@@ -122,8 +122,23 @@ export const termsContent: LegalPageContent = {
       ],
     },
     {
+      id: "data-deletion",
+      heading: "11. Data Deletion",
+      paragraphs: [
+        "Customers and end-users may request the permanent deletion or anonymization of personal and messaging data processed through the Service at any time, including upon subscription termination or withdrawal of consent.",
+        "Upon verification of identity and account authority, Onlyfold will delete or irreversibly anonymize operational messaging records and lead information where legally and technically permissible, subject to limited retention exceptions required for statutory accounting, tax, security, or fraud-prevention purposes. Deleting data from Onlyfold's systems is separate from data stored independently by Meta Platforms, Inc. or WhatsApp.",
+      ],
+      link: {
+        prefix:
+          "For detailed submission instructions and exclusions, please review our Data Deletion page at ",
+        label: "https://onlyfold.com/data-deletion",
+        href: siteConfig.links.dataDeletion,
+        suffix: ".",
+      },
+    },
+    {
       id: "limitation-of-liability",
-      heading: "11. Limitation of Liability",
+      heading: "12. Limitation of Liability",
       paragraphs: [
         "To the fullest extent permitted by applicable law, in no event shall Onlyfold AI, its founders, directors, employees, or partners be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data loss, business interruption, loss of goodwill, or costs of substitute services, arising out of or related to your use of or inability to use the Service or any actions taken by Meta Platforms, Inc.",
         "To the maximum extent permitted by applicable law, Onlyfold's total aggregate liability arising out of or relating to the Service or these Terms shall not exceed the total amount paid by you to Onlyfold for the Service in the twelve (12) months immediately preceding the event giving rise to liability.",
@@ -131,7 +146,7 @@ export const termsContent: LegalPageContent = {
     },
     {
       id: "dispute-resolution",
-      heading: "12. Dispute Resolution",
+      heading: "13. Dispute Resolution",
       paragraphs: [
         "In the event of any controversy, claim, or dispute arising out of or relating to these Terms or the Service, the parties agree to first attempt in good faith to resolve the matter through informal executive consultations by contacting support@onlyfold.com.",
         "If informal consultations fail to resolve the dispute within thirty (30) days, the dispute shall be resolved through binding, confidential arbitration or conciliation administered in accordance with standard commercial arbitration rules.",
@@ -140,7 +155,7 @@ export const termsContent: LegalPageContent = {
     },
     {
       id: "modifications-to-terms",
-      heading: "13. Modifications to Terms",
+      heading: "14. Modifications to Terms",
       paragraphs: [
         "We reserve the right to revise or update these Terms periodically to reflect product updates, operational changes, or new regulatory standards.",
         "Your continued use of the Service following the publication of revised Terms on this Website constitutes your acceptance of the updated terms. If you do not agree to the updated terms, you must cease using the Service.",
@@ -148,7 +163,7 @@ export const termsContent: LegalPageContent = {
     },
   ],
   contactNotice: {
-    heading: "14. Contact Information",
+    heading: "15. Contact Information",
     text: "For legal inquiries, contract clarifications, or formal notices regarding these Terms, please contact our legal representative at:",
     email: "support@onlyfold.com",
   },

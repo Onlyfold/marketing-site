@@ -6,12 +6,20 @@ export interface LegalSubSection {
   readonly listItems?: readonly string[];
 }
 
+export interface LegalSectionLink {
+  readonly prefix?: string;
+  readonly label: string;
+  readonly href: Href;
+  readonly suffix?: string;
+}
+
 export interface LegalSection {
   readonly id?: string;
   readonly heading: string;
   readonly paragraphs: readonly string[];
   readonly listItems?: readonly string[];
   readonly subSections?: readonly LegalSubSection[];
+  readonly link?: LegalSectionLink;
   readonly note?: string;
 }
 

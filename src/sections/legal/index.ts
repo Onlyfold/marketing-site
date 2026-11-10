@@ -5,6 +5,7 @@ export { dataDeletionContent } from "./data-deletion.content";
 export type {
   LegalPageContent,
   LegalSection,
+  LegalSectionLink,
   LegalSubSection,
   LegalContactNotice,
 } from "./legal.types";
