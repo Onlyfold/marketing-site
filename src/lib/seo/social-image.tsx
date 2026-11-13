@@ -17,9 +17,9 @@ const COLORS = {
 
 async function brandLogoDataUrl(): Promise<string> {
   const file = await readFile(
-    path.join(process.cwd(), "public/images/brand-logo.png"),
+    path.join(process.cwd(), "public/images/brand-logo.svg"),
   );
-  return `data:image/png;base64,${file.toString("base64")}`;
+  return `data:image/svg+xml;base64,${file.toString("base64")}`;
 }
 
 /** 1200×630 card shared by opengraph-image and twitter-image. */

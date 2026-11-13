@@ -1,29 +1,25 @@
 @theme {
-  /* Connector arrows between process steps: horizontal on desktop, vertical on mobile */
-  --animate-connector-x: connector-x 1.5s infinite ease-in-out;
-  --animate-connector-y: connector-y 1.5s infinite ease-in-out;
+  --animate-rail-glow: rail-glow 3.5s infinite ease-in-out;
+  --animate-lead-dash: lead-dash 3.5s linear infinite;
 
-  @keyframes connector-x {
-    0%,
-    100% {
-      transform: translate(-5px, -50%);
-      opacity: 0.3;
-    }
-    50% {
-      transform: translate(5px, -50%);
-      opacity: 1;
+  @keyframes lead-dash {
+    to {
+      stroke-dashoffset: -80;
     }
   }
 
-  @keyframes connector-y {
-    0%,
-    100% {
-      transform: translate(-50%, -5px) rotate(90deg);
-      opacity: 0.3;
+  @keyframes rail-glow {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
     }
-    50% {
-      transform: translate(-50%, 5px) rotate(90deg);
-      opacity: 1;
+    25%,
+    75% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateX(120%);
+      opacity: 0;
     }
   }
 }
@@ -31,7 +27,27 @@
 @utility bg-gradient-how-it-works {
   background-image: linear-gradient(
     145deg,
-    var(--color-agentic-purple) 4%,
-    var(--color-deep-navy) 89%
+    var(--color-indigo-vivid) 0%,
+    var(--color-black) 100%
+  );
+}
+
+@utility bg-gradient-step-rail-x {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-onlyfold-teal),
+    var(--color-agentic-purple),
+    var(--color-fusion-gold),
+    var(--color-aqua-mint)
+  );
+}
+
+@utility bg-gradient-step-rail-y {
+  background-image: linear-gradient(
+    180deg,
+    var(--color-onlyfold-teal),
+    var(--color-agentic-purple),
+    var(--color-fusion-gold),
+    var(--color-aqua-mint)
   );
 }

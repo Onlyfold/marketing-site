@@ -50,8 +50,8 @@ export const navActions: readonly NavAction[] = [
 ];
 
 export const brandLogo = {
-  src: "/images/brand-logo.png",
+  src: "/images/brand-logo.svg",
   alt: "Onlyfold",
-  width: 150,
+  width: 165,
   height: 32,
 } as const;

@@ -27,7 +27,7 @@ export function SiteFooter() {
               <Image
                 {...footerLogo}
                 alt={footerLogo.alt}
-                className="object-contain brightness-0 invert"
+                className="h-8 w-auto object-contain"
               />
             </Link>
             <p className="text-base leading-normal text-white/70">

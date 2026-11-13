@@ -14,8 +14,8 @@ export function organizationSchema(): JsonLdNode {
     url: siteConfig.url,
     logo: {
       "@type": "ImageObject",
-      url: `${siteConfig.url}/images/brand-logo.png`,
-      width: 855,
+      url: `${siteConfig.url}/images/brand-logo.svg`,
+      width: 1044,
       height: 202,
     },
     ...(sameAs.length > 0 ? { sameAs } : {}),

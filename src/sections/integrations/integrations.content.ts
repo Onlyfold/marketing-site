@@ -50,10 +50,10 @@ export const integrationsContent = {
   ] satisfies readonly IntegrationBenefitContent[],
   orbit: {
     centerLogo: {
-      src: "/images/brand-logo.png",
+      src: "/images/brand-logo.svg",
       alt: "Onlyfold",
       width: 90,
-      height: 20,
+      height: 17,
     } satisfies ImageAsset,
     rings: [
       {

@@ -8,9 +8,9 @@ export const contentType = "image/png";
 /** Brand mark on white for iOS home screens. */
 export default async function AppleIcon() {
   const file = await readFile(
-    path.join(process.cwd(), "public/images/brand-logo.png"),
+    path.join(process.cwd(), "public/images/brand-logo.svg"),
   );
-  const logo = `data:image/png;base64,${file.toString("base64")}`;
+  const logo = `data:image/svg+xml;base64,${file.toString("base64")}`;
 
   return new ImageResponse(
     <div
@@ -23,7 +23,7 @@ export default async function AppleIcon() {
         background: "#ffffff",
       }}
     >
-      <img src={logo} alt="" width={150} height={35} />
+      <img src={logo} alt="" width={150} height={29} />
     </div>,
     size,
   );

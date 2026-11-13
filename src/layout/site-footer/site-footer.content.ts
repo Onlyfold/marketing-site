@@ -3,9 +3,9 @@ import type { CtaContent, ImageAsset } from "@/types/content";
 import type { LinkGroup } from "@/types/links";
 
 export const footerLogo: ImageAsset = {
-  src: "/images/footer-logo.png",
+  src: "/images/footer-logo.svg",
   alt: "Onlyfold",
-  width: 150,
+  width: 167,
   height: 32,
 };
 
@@ -51,20 +51,12 @@ export const footerLinkGroups: readonly LinkGroup[] = [
     ],
   },
   {
-    id: "resources",
-    heading: "RESOURCES",
-    links: [
-      { label: "Support", href: "#" },
-      { label: "Contact Us", href: "#" },
-      { label: "Privacy Policy", href: siteConfig.links.privacy },
-      { label: "API Documentation", href: "#" },
-    ],
-  },
-  {
     id: "company",
     heading: "COMPANY",
     links: [
       { label: "About Us", href: "#" },
+      { label: "Contact Us", href: "#" },
+      { label: "Privacy Policy", href: siteConfig.links.privacy },
       { label: "Terms of Service", href: siteConfig.links.terms },
       { label: "Careers", href: "#" },
       { label: "Blog", href: "#" },
