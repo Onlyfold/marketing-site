@@ -1,8 +1,8 @@
 export function VisualHotLeadAlert() {
   return (
-    <div className="relative mx-auto w-full max-w-[400px] overflow-hidden rounded-2xl border border-white/10 bg-core-navy/95 shadow-2xl backdrop-blur-md">
+    <div className="relative mx-auto w-full max-w-[400px] overflow-hidden rounded-2xl border border-onlyfold-teal/10 bg-core-navy/95 shadow-2xl backdrop-blur-md">
       {/* WhatsApp Rep Interface Bar */}
-      <div className="flex items-center gap-3 border-b border-white/10 bg-white/5 px-4 py-3">
+      <div className="flex items-center gap-3 border-b border-onlyfold-teal/10 bg-electric-blue/5 px-4 py-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-smart-orange to-agentic-purple text-xs font-bold text-white">
           OF
         </div>
@@ -57,7 +57,7 @@ export function VisualHotLeadAlert() {
           <div className="mt-3.5 grid grid-cols-2 gap-2 pt-1">
             <button
               type="button"
-              className="flex items-center justify-center gap-1.5 rounded-lg bg-aqua-mint px-3 py-2 text-center text-xs font-bold text-core-navy shadow-md transition-transform hover:scale-[1.02]"
+              className="flex items-center justify-center gap-1.5 rounded-lg bg-onlyfold-teal px-3 py-2 text-center text-xs font-bold text-core-navy shadow-md transition-transform hover:scale-[1.02]"
             >
               <span>📞 Call Now</span>
             </button>

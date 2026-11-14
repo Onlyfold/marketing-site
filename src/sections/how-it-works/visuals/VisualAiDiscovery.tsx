@@ -1,22 +1,24 @@
 export function VisualAiDiscovery() {
   return (
-    <div className="relative mx-auto w-full max-w-[400px] overflow-hidden rounded-2xl border border-white/10 bg-core-navy/95 shadow-2xl backdrop-blur-md">
+    <div className="relative mx-auto w-full max-w-[400px] overflow-hidden rounded-2xl border border-onlyfold-teal/10 bg-core-navy/95 shadow-2xl backdrop-blur-md">
       {/* WhatsApp Header */}
-      <div className="flex items-center gap-3 border-b border-white/10 bg-white/5 px-4 py-3">
-        <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-aqua-mint to-electric-blue text-xs font-bold text-white">
+      <div className="flex items-center gap-3 border-b border-onlyfold-teal/10 bg-electric-blue/5 px-4 py-3">
+        <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-onlyfold-teal to-electric-blue text-xs font-bold text-white">
           OF
-          <span className="absolute -right-0.5 -bottom-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white text-[9px] text-aqua-mint">
+          <span className="absolute -right-0.5 -bottom-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white text-[9px] text-onlyfold-teal">
             ✓
           </span>
         </div>
         <div className="flex-1">
           <p className="flex items-center gap-1.5 text-xs font-bold text-white">
             Onlyfold Assistant
-            <span className="rounded py-0.2 bg-aqua-mint/20 px-1 text-[9px] font-medium text-aqua-mint">
+            <span className="rounded py-0.2 bg-onlyfold-teal/20 px-1 text-[9px] font-medium text-onlyfold-teal">
               AI Bot
             </span>
           </p>
-          <p className="text-[10px] text-aqua-mint">Online • Instant reply</p>
+          <p className="text-[10px] text-onlyfold-teal">
+            Online • Instant reply
+          </p>
         </div>
       </div>
 
@@ -34,12 +36,12 @@ export function VisualAiDiscovery() {
         </div>
 
         {/* Incoming User Bubble */}
-        <div className="ml-auto max-w-[85%] rounded-2xl rounded-tr-sm bg-aqua-mint/20 p-3 text-white">
+        <div className="ml-auto max-w-[85%] rounded-2xl rounded-tr-sm bg-onlyfold-teal/15 p-3 text-white">
           <p>
             Looking for 3BHK for self-use. Budget around 1.5 Cr, ready to book
             this month.
           </p>
-          <span className="mt-1 flex items-center justify-end gap-1 text-[9px] text-aqua-mint">
+          <span className="mt-1 flex items-center justify-end gap-1 text-[9px] text-onlyfold-teal">
             10:15 AM ✓✓
           </span>
         </div>
@@ -58,7 +60,7 @@ export function VisualAiDiscovery() {
       </div>
 
       {/* Auto-Qualification Badge Bar */}
-      <div className="border-t border-white/10 bg-white/5 px-4 py-2.5">
+      <div className="border-t border-onlyfold-teal/10 bg-electric-blue/5 px-4 py-2.5">
         <div className="flex flex-wrap items-center justify-between gap-1.5 text-[11px]">
           <span className="rounded-md bg-agentic-purple/20 px-2 py-0.5 font-semibold text-agentic-purple">
             Intent: High 🔥
@@ -66,7 +68,7 @@ export function VisualAiDiscovery() {
           <span className="rounded-md bg-white/10 px-2 py-0.5 font-medium text-white/80">
             Budget: ₹1.5 Cr
           </span>
-          <span className="rounded-md bg-aqua-mint/20 px-2 py-0.5 font-semibold text-aqua-mint">
+          <span className="rounded-md bg-onlyfold-teal/20 px-2 py-0.5 font-semibold text-onlyfold-teal">
             Ready to Close ✓
           </span>
         </div>

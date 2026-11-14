@@ -1,8 +1,8 @@
 export function VisualAutoSequence() {
   return (
-    <div className="relative mx-auto w-full max-w-[400px] rounded-2xl border border-white/10 bg-core-navy/95 p-5 shadow-2xl backdrop-blur-md">
+    <div className="relative mx-auto w-full max-w-[400px] rounded-2xl border border-onlyfold-teal/10 bg-core-navy/95 p-5 shadow-2xl backdrop-blur-md">
       {/* Sequence Header */}
-      <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
+      <div className="mb-4 flex items-center justify-between border-b border-onlyfold-teal/10 pb-3">
         <div>
           <p className="text-xs font-bold text-white">
             Smart Follow-up Cadence
@@ -20,13 +20,13 @@ export function VisualAutoSequence() {
       <div className="relative space-y-3.5 before:absolute before:top-2 before:bottom-2 before:left-[15px] before:w-0.5 before:bg-white/10">
         {/* Step 1 */}
         <div className="relative flex items-start gap-3">
-          <div className="z-10 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-aqua-mint/50 bg-aqua-mint/20 text-[10px] font-bold text-aqua-mint">
+          <div className="z-10 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-onlyfold-teal/50 bg-onlyfold-teal/20 text-[10px] font-bold text-onlyfold-teal">
             D1
           </div>
           <div className="flex-1 rounded-xl border border-white/5 bg-white/5 p-2.5 text-xs text-white/80">
             <div className="flex items-center justify-between font-semibold text-white">
               <span>Brochure & Floorplans</span>
-              <span className="text-[10px] text-aqua-mint">Read ✓✓</span>
+              <span className="text-[10px] text-onlyfold-teal">Read ✓✓</span>
             </div>
             <p className="mt-1 text-[11px] text-white/60">
               Sent 5 mins post-enquiry with payment options.
@@ -42,7 +42,9 @@ export function VisualAutoSequence() {
           <div className="flex-1 rounded-xl border border-white/5 bg-white/5 p-2.5 text-xs text-white/80">
             <div className="flex items-center justify-between font-semibold text-white">
               <span>Sample Flat Video Tour</span>
-              <span className="text-[10px] text-aqua-mint">Delivered ✓✓</span>
+              <span className="text-[10px] text-onlyfold-teal">
+                Delivered ✓✓
+              </span>
             </div>
             <p className="mt-1 text-[11px] text-white/60">
               &quot;Take a look at how unit 14B looks inside...&quot;
@@ -63,7 +65,7 @@ export function VisualAutoSequence() {
             <p className="mt-1 text-[11px] text-white/90">
               &quot;Yes, please call me today at 4:00 PM.&quot;
             </p>
-            <div className="mt-2 flex items-center gap-1.5 text-[10px] font-medium text-aqua-mint">
+            <div className="mt-2 flex items-center gap-1.5 text-[10px] font-medium text-onlyfold-teal">
               <span>⚡ Cadence Paused Automatically</span>
               <span>•</span>
               <span>Sales Alert Fired</span>
