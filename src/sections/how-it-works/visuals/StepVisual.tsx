@@ -1,6 +1,7 @@
 import type { ProcessStepId } from "../how-it-works.content";
 import { VisualAiDiscovery } from "./VisualAiDiscovery";
 import { VisualAutoSequence } from "./VisualAutoSequence";
+import { VisualCallReminder } from "./VisualCallReminder";
 import { VisualHotLeadAlert } from "./VisualHotLeadAlert";
 import { VisualLeadCapture } from "./VisualLeadCapture";
 import { VisualRepClose } from "./VisualRepClose";
@@ -21,6 +22,8 @@ export function StepVisual({ stepId }: StepVisualProps) {
       return <VisualHotLeadAlert />;
     case "close":
       return <VisualRepClose />;
+    case "reminder":
+      return <VisualCallReminder />;
     default:
       return null;
   }

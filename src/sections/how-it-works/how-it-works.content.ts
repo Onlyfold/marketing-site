@@ -1,7 +1,7 @@
 import type { SectionHeadingContent } from "@/types/content";
 
 export type ProcessStepId =
-  "capture" | "qualify" | "followup" | "alert" | "close";
+  "capture" | "qualify" | "followup" | "alert" | "close" | "reminder";
 
 export interface ProcessStepSocialProof {
   readonly quote: string;
@@ -157,6 +157,30 @@ export const howItWorksContent = {
         badge: "DEAL CLOSED 🏆",
         headline: "Rajesh Sharma • ₹1.5 Cr Deal",
         subline: "Pre-qualified on WhatsApp • Closed on 1st Call",
+      },
+    },
+    {
+      id: "reminder",
+      number: "06",
+      tag: "Call Reminders",
+      eyebrow: "PRECISION CALL REMINDERS",
+      title: "Never miss a scheduled callback",
+      subtitle:
+        "When a buyer asks to talk tomorrow at 4 PM, missing it kills the deal. Onlyfold prompts your rep right on time.",
+      benefits: [
+        "1-tap call reminder synced directly from WhatsApp chat to your rep's calendar.",
+        "Smart alerts 5 minutes before the call with buyer requirement and intent summary.",
+      ],
+      socialProof: {
+        quote:
+          "Our callback completion rate jumped to 98%. Reps never lose a warm deal because someone forgot to dial back.",
+        author: "Saurabh B., Founder & CEO",
+        metric: "98% On-Time Calls",
+      },
+      visualMeta: {
+        badge: "⏰ TIMED CALL REMINDER",
+        headline: "Call with Rajesh Sharma in 5m",
+        subline: "3BHK Corner Unit • 4:00 PM Callback",
       },
     },
   ] satisfies readonly ProcessStepContent[],
