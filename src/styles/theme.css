@@ -10,21 +10,24 @@
   --color-black: #000000;
   --color-transparent: transparent;
 
-  /* Primary */
+  /* Primary (5) — Foundation, major surfaces, brand identity */
   --color-core-navy: #191841;
   --color-electric-blue: #0708ee;
   --color-agentic-purple: #af4fed;
   --color-smart-orange: #eb5854;
   --color-onlyfold-teal: #88e2d2;
 
-  /* Secondary */
+  /* Secondary (3) — Use sparingly (≤ 1:2 ratio vs primary) */
   --color-digital-magenta: #dc3fb6;
   --color-fusion-gold: #f8a45d;
+  --color-quantum-indigo: #5741dc;
+
+  /* Specialty (5) — For specific accessibility, neutral or functional needs */
+  --color-deep-magenta: #a1378b;
   --color-dark-blue: #2b4279;
+  --color-aqua-mint: #36d7ac;
   --color-text-grey: #484b58;
   --color-light-grey: #e8e8e8;
-  --color-quantum-indigo: #5741dc;
-  --color-aqua-mint: #36d7ac;
 
   /* Semantic */
   --color-background: #ffffff;
@@ -40,6 +43,18 @@
   --color-glow-blue: #0592f9; /* industries glow */
   --color-line-cyan: #00d2ff; /* footer divider start */
   --color-line-blue: #3a7bd5; /* footer divider middle */
+
+  /* WhatsApp UI mockup tokens (How It Works conversation visual) */
+  --color-wa-header: #075e54;
+  --color-wa-green: #25d366;
+  --color-wa-mic: #00a884;
+  --color-wa-action: #027eb5;
+  --color-wa-wallpaper: #efeae2;
+  --color-wa-bubble-out: #d9fdd3;
+  --color-wa-divider: #e9edef;
+  --color-wa-tick: #53bdeb;
+  --color-wa-ink: #111b21;
+  --color-wa-muted: #667781;
 
   /* --- Radii (replaces Tailwind's scale so rounded-lg = 12px as in the design) --- */
   --radius-*: initial;
@@ -100,19 +115,68 @@
 
 :root {
   /* Gradients are not a Tailwind theme namespace; exposed through @utility rules. */
-  --gradient-brand-3: linear-gradient(
+
+  /* Master Background Gradients */
+  --gradient-main-dark: linear-gradient(
     120deg,
     var(--color-core-navy),
+    var(--color-electric-blue)
+  );
+  --gradient-main-4: linear-gradient(
+    180deg,
+    var(--color-onlyfold-teal) 0%,
+    var(--color-agentic-purple) 33%,
+    var(--color-electric-blue) 66%,
+    var(--color-smart-orange) 100%
+  );
+
+  /* Secondary Gradients (120deg angle per brand guidelines) */
+  --gradient-secondary-1: linear-gradient(
+    120deg,
+    var(--color-electric-blue),
+    var(--color-onlyfold-teal)
+  );
+  --gradient-secondary-2: linear-gradient(
+    120deg,
     var(--color-electric-blue),
     var(--color-agentic-purple)
   );
-  --gradient-brand-4: linear-gradient(
+  --gradient-secondary-3: linear-gradient(
     120deg,
-    var(--color-core-navy),
-    var(--color-electric-blue),
+    var(--color-aqua-mint),
+    var(--color-onlyfold-teal)
+  );
+  --gradient-secondary-4: linear-gradient(
+    120deg,
     var(--color-agentic-purple),
+    var(--color-electric-blue)
+  );
+  --gradient-secondary-6: linear-gradient(
+    120deg,
+    var(--color-electric-blue),
+    var(--color-digital-magenta)
+  );
+  --gradient-secondary-7: linear-gradient(
+    120deg,
+    var(--color-light-grey),
+    var(--color-white)
+  );
+
+  /* Component CTA Gradients */
+  --gradient-cta-premium: linear-gradient(
+    120deg,
+    var(--color-electric-blue),
+    var(--color-core-navy)
+  );
+  --gradient-cta-action: linear-gradient(
+    120deg,
+    var(--color-electric-blue),
     var(--color-smart-orange)
   );
+
+  /* Legacy aliases for backwards compatibility */
+  --gradient-brand-3: var(--gradient-main-dark);
+  --gradient-brand-4: var(--gradient-main-4);
   --gradient-text-brand: linear-gradient(
     90deg,
     var(--color-onlyfold-teal),

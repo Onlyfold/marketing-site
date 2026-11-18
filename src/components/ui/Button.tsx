@@ -4,7 +4,14 @@ import { cn } from "@/lib/cn";
 import type { Href } from "@/types/links";
 
 export type ButtonVariant =
-  "primary" | "outline" | "outlineWhite" | "white" | "indigo";
+  | "primary"
+  | "outline"
+  | "outlineWhite"
+  | "secondaryBlue"
+  | "white"
+  | "indigo"
+  | "gradientPremium"
+  | "gradientAction";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const BASE =
@@ -18,15 +25,21 @@ const SIZES: Record<ButtonSize, string> = {
 
 const VARIANTS: Record<ButtonVariant, string> = {
   primary:
-    "bg-aqua-mint text-core-navy hover:-translate-y-0.5 hover:shadow-btn-primary",
+    "bg-onlyfold-teal text-core-navy hover:-translate-y-0.5 hover:shadow-btn-primary",
   outline:
     "border-[1.5px] border-core-navy bg-transparent text-core-navy hover:bg-core-navy hover:text-white",
   outlineWhite:
     "border-[1.5px] border-white bg-transparent text-white hover:bg-white hover:text-core-navy",
+  secondaryBlue:
+    "border-2 border-electric-blue bg-transparent text-electric-blue hover:bg-electric-blue hover:text-white",
   white:
     "bg-white text-core-navy hover:-translate-y-0.5 hover:shadow-btn-white",
   indigo:
     "bg-indigo-cta text-white shadow-btn-indigo hover:-translate-y-0.5 hover:shadow-btn-indigo-hover",
+  gradientPremium:
+    "bg-gradient-cta-premium text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg",
+  gradientAction:
+    "bg-gradient-cta-action text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg",
 };
 
 interface CommonProps {

@@ -12,6 +12,46 @@
 @custom-variant below-md (@media (width <= 48rem));
 @custom-variant below-xs (@media (width <= 30rem));
 
+@utility bg-gradient-main-dark {
+  background-image: var(--gradient-main-dark);
+}
+
+@utility bg-gradient-main-4 {
+  background-image: var(--gradient-main-4);
+}
+
+@utility bg-gradient-secondary-1 {
+  background-image: var(--gradient-secondary-1);
+}
+
+@utility bg-gradient-secondary-2 {
+  background-image: var(--gradient-secondary-2);
+}
+
+@utility bg-gradient-secondary-3 {
+  background-image: var(--gradient-secondary-3);
+}
+
+@utility bg-gradient-secondary-4 {
+  background-image: var(--gradient-secondary-4);
+}
+
+@utility bg-gradient-secondary-6 {
+  background-image: var(--gradient-secondary-6);
+}
+
+@utility bg-gradient-secondary-7 {
+  background-image: var(--gradient-secondary-7);
+}
+
+@utility bg-gradient-cta-premium {
+  background-image: var(--gradient-cta-premium);
+}
+
+@utility bg-gradient-cta-action {
+  background-image: var(--gradient-cta-action);
+}
+
 @utility bg-gradient-brand-3 {
   background-image: var(--gradient-brand-3);
 }

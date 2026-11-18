@@ -11,7 +11,7 @@ export function HowItWorksNarrative() {
       {/* Central Illuminated Pipeline Thread on Desktop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-12 bottom-12 left-1/2 hidden w-0.5 -translate-x-1/2 bg-gradient-to-b from-onlyfold-teal via-electric-blue to-aqua-mint opacity-30 lg:block"
+        className="pointer-events-none absolute top-12 bottom-12 left-1/2 hidden w-0.5 -translate-x-1/2 bg-gradient-to-b from-onlyfold-teal via-electric-blue to-agentic-purple opacity-35 lg:block"
       />
 
       {steps.map((step, index) => {
@@ -27,7 +27,7 @@ export function HowItWorksNarrative() {
               aria-hidden="true"
               className="absolute top-1/2 left-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 lg:flex"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-onlyfold-teal/30 bg-core-navy text-xs font-extrabold text-onlyfold-teal shadow-xl">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white text-xs font-extrabold text-core-navy shadow-lg">
                 {step.number}
               </div>
             </div>
@@ -42,24 +42,24 @@ export function HowItWorksNarrative() {
                 <StepVisual stepId={step.id} />
               </div>
 
-              {/* Colocated Micro Social Proof / Metric (TeleCRM style) */}
-              <div className="mt-4 w-full max-w-[480px] rounded-2xl border border-onlyfold-teal/10 bg-core-navy/70 p-4 shadow-lg backdrop-blur-md transition-colors hover:border-onlyfold-teal/25">
+              {/* Colocated Micro Social Proof / Metric (TeleCRM Crisp Light Style) */}
+              <div className="mt-4 w-full max-w-[480px] rounded-2xl border border-white/90 bg-white p-4 text-core-navy shadow-[0_16px_40px_rgba(0,0,0,0.18)]">
                 <div className="flex items-start gap-3.5">
                   {/* Founder / Leader Initials Monogram Badge */}
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-onlyfold-teal/40 bg-gradient-to-br from-core-navy to-electric-blue text-xs font-black text-onlyfold-teal shadow-inner">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-light-grey bg-surface text-xs font-black text-agentic-purple shadow-inner">
                     {step.socialProof.author.split(" ")[0]?.[0]}
                     {step.socialProof.author.split(" ")[1]?.[0]}
                   </div>
 
                   <div className="flex-1">
-                    <p className="text-xs leading-relaxed text-white/90 italic">
+                    <p className="text-xs leading-relaxed font-medium text-core-navy/90 italic">
                       &ldquo;{step.socialProof.quote}&rdquo;
                     </p>
-                    <div className="mt-2.5 flex items-center justify-between gap-2 border-t border-white/5 pt-2">
-                      <p className="text-[11px] font-medium text-white/60">
+                    <div className="mt-2.5 flex items-center justify-between gap-2 border-t border-light-grey pt-2">
+                      <p className="text-[11px] font-medium text-text-grey">
                         — {step.socialProof.author}
                       </p>
-                      <span className="shrink-0 rounded-full border border-onlyfold-teal/30 bg-onlyfold-teal/15 px-2.5 py-0.5 text-[10px] font-bold text-onlyfold-teal">
+                      <span className="shrink-0 rounded-full border border-electric-blue/20 bg-electric-blue/10 px-2.5 py-0.5 text-[10px] font-bold text-electric-blue">
                         {step.socialProof.metric}
                       </span>
                     </div>
@@ -76,10 +76,10 @@ export function HowItWorksNarrative() {
             >
               {/* Step Chip & Eyebrow */}
               <div className="mb-3 flex items-center gap-2.5">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-electric-blue/15 text-xs font-bold text-onlyfold-teal lg:hidden">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-extrabold text-core-navy shadow-sm lg:hidden">
                   {step.number}
                 </span>
-                <span className="rounded-full border border-onlyfold-teal/15 bg-electric-blue/10 px-3 py-1 text-[11px] font-bold tracking-wider text-onlyfold-teal uppercase">
+                <span className="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-bold tracking-wider text-white uppercase backdrop-blur-sm">
                   {step.eyebrow}
                 </span>
               </div>
@@ -90,15 +90,15 @@ export function HowItWorksNarrative() {
               </h3>
 
               {/* Problem-Solution Subtitle */}
-              <p className="mt-3 text-base leading-relaxed text-white/70">
+              <p className="mt-3 text-base leading-relaxed text-white/80">
                 {step.subtitle}
               </p>
 
-              {/* 3 Checkmark Benefit Points */}
+              {/* Checkmark Benefit Points */}
               <ul className="mt-6 space-y-3">
                 {step.benefits.map((benefit, bIndex) => (
                   <li key={bIndex} className="flex items-start gap-3">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-onlyfold-teal/20 text-xs font-bold text-onlyfold-teal">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-core-navy shadow-sm">
                       ✓
                     </span>
                     <span className="text-sm text-white/90">{benefit}</span>

@@ -26,10 +26,10 @@ export function HowItWorks() {
         <HowItWorksNarrative />
 
         <RevealOnScroll className="mt-20 flex justify-center">
-          <p className="inline-flex items-center gap-3 rounded-pill border-[1.5px] border-onlyfold-teal/40 bg-core-navy/65 px-8 py-4 text-center text-lg font-semibold text-white shadow-card backdrop-blur-[10px] transition-all duration-200 ease-base hover:border-onlyfold-teal hover:bg-white hover:text-core-navy below-md:px-6 below-md:text-base">
+          <p className="inline-flex items-center gap-3 rounded-pill border border-white/90 bg-white px-8 py-4 text-center text-lg font-bold text-core-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)] transition-transform duration-200 ease-base hover:scale-[1.02] below-md:px-6 below-md:text-base">
             <span
               aria-hidden="true"
-              className="h-2 w-2 shrink-0 rounded-full bg-onlyfold-teal"
+              className="h-2.5 w-2.5 shrink-0 rounded-full bg-electric-blue"
             />
             {closingLine}
           </p>
