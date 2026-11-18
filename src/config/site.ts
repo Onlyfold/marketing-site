@@ -15,6 +15,11 @@ export const siteConfig = {
   /** Locale used for every number shown on the page (deterministic across server and client). */
   numberLocale: "en-US",
 
+  contact: {
+    phone: "+917209609521",
+    email: "support@onlyfold.com",
+  },
+
   /**
    * Shared destinations used by CTAs across sections.
    * `#demo` and `#reviews` match the reference site and currently have no target

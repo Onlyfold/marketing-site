@@ -15,7 +15,18 @@ export const footerContent = {
     label: "BOOK A FREE DEMO",
     href: siteConfig.links.demo,
   } satisfies CtaContent,
+  contact: {
+    phone: {
+      label: siteConfig.contact.phone,
+      href: `tel:${siteConfig.contact.phone}`,
+    },
+    email: {
+      label: siteConfig.contact.email,
+      href: `mailto:${siteConfig.contact.email}`,
+    },
+  },
   followLabel: "Follow Us:",
+  copyrightOwner: "Onlyfold AI",
   rightsNotice: "All rights reserved worldwide.",
 } as const;
 
