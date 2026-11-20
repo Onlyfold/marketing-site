@@ -11,7 +11,7 @@ export function HowItWorks() {
   return (
     <Section
       id="features"
-      className="overflow-hidden bg-gradient-how-it-works py-28 text-white"
+      className="overflow-hidden bg-gradient-main-dark py-28 text-white"
     >
       <Container className="relative z-[2]">
         <SectionHeading

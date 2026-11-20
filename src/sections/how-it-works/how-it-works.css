@@ -24,15 +24,6 @@
   }
 }
 
-@utility bg-gradient-how-it-works {
-  background-image: linear-gradient(
-    120deg,
-    var(--color-core-navy) 0%,
-    var(--color-electric-blue) 50%,
-    var(--color-agentic-purple) 100%
-  );
-}
-
 @utility bg-gradient-step-rail-x {
   background-image: linear-gradient(
     120deg,
