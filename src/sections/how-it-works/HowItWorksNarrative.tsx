@@ -20,7 +20,7 @@ export function HowItWorksNarrative() {
         return (
           <RevealOnScroll
             key={step.id}
-            className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16"
+            className={`relative ${isEven ? "step-grid-even" : "step-grid-odd"}`}
           >
             {/* Center Node Badge on Desktop */}
             <div
@@ -32,18 +32,58 @@ export function HowItWorksNarrative() {
               </div>
             </div>
 
-            {/* Visual Column */}
+            {/* 1. Header: Step Chip, Eyebrow & Title */}
             <div
-              className={`flex flex-col items-center ${
-                isEven ? "lg:order-2" : "lg:order-1"
+              className={`step-area-header flex flex-col items-start ${
+                isEven ? "lg:pr-12" : "lg:pl-12"
               }`}
             >
+              <div className="mb-3 flex items-center gap-2.5">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-extrabold text-core-navy shadow-sm lg:hidden">
+                  {step.number}
+                </span>
+                <span className="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-bold tracking-wider text-white uppercase backdrop-blur-sm">
+                  {step.eyebrow}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-extrabold tracking-tight text-white md:text-3xl">
+                {step.title}
+              </h3>
+            </div>
+
+            {/* 2. Visual: The Interactive / Vector Graphic */}
+            <div className="step-area-visual flex w-full flex-col items-center">
               <div className="w-full">
                 <StepVisual stepId={step.id} />
               </div>
+            </div>
 
-              {/* Colocated Micro Social Proof / Metric (TeleCRM Crisp Light Style) */}
-              <div className="mt-4 w-full max-w-[480px] rounded-2xl border border-white/90 bg-white p-4 text-core-navy shadow-[0_16px_40px_rgba(0,0,0,0.18)]">
+            {/* 3. Body: Subtitle Description, Checkmark Benefits, Social Proof & CTA */}
+            <div
+              className={`step-area-body flex flex-col items-start ${
+                isEven ? "lg:pr-12" : "lg:pl-12"
+              }`}
+            >
+              {/* Problem-Solution Subtitle */}
+              <p className="text-base leading-relaxed text-white/80">
+                {step.subtitle}
+              </p>
+
+              {/* Checkmark Benefit Points */}
+              <ul className="mt-5 space-y-3">
+                {step.benefits.map((benefit, bIndex) => (
+                  <li key={bIndex} className="flex items-start gap-3">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-core-navy shadow-sm">
+                      ✓
+                    </span>
+                    <span className="text-sm text-white/90">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Colocated Micro Social Proof / Metric */}
+              <div className="mt-6 w-full max-w-[480px] rounded-2xl border border-white/90 bg-white p-4 text-core-navy shadow-[0_16px_40px_rgba(0,0,0,0.18)]">
                 <div className="flex items-start gap-3.5">
                   {/* Founder / Leader Initials Monogram Badge */}
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-light-grey bg-surface text-xs font-black text-agentic-purple shadow-inner">
@@ -66,48 +106,9 @@ export function HowItWorksNarrative() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Copy Column */}
-            <div
-              className={`flex flex-col items-start ${
-                isEven ? "lg:order-1 lg:pr-12" : "lg:order-2 lg:pl-12"
-              }`}
-            >
-              {/* Step Chip & Eyebrow */}
-              <div className="mb-3 flex items-center gap-2.5">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-extrabold text-core-navy shadow-sm lg:hidden">
-                  {step.number}
-                </span>
-                <span className="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-bold tracking-wider text-white uppercase backdrop-blur-sm">
-                  {step.eyebrow}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-extrabold tracking-tight text-white md:text-3xl">
-                {step.title}
-              </h3>
-
-              {/* Problem-Solution Subtitle */}
-              <p className="mt-3 text-base leading-relaxed text-white/80">
-                {step.subtitle}
-              </p>
-
-              {/* Checkmark Benefit Points */}
-              <ul className="mt-6 space-y-3">
-                {step.benefits.map((benefit, bIndex) => (
-                  <li key={bIndex} className="flex items-start gap-3">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-core-navy shadow-sm">
-                      ✓
-                    </span>
-                    <span className="text-sm text-white/90">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
 
               {/* Section CTA Button */}
-              <div className="mt-8">
+              <div className="mt-6">
                 <Button
                   variant="primary"
                   size="sm"

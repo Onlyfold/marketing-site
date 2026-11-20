@@ -67,3 +67,61 @@
     display: none;
   }
 }
+
+/* Responsive Step Grid: Mobile-First flow (Title -> Graphic -> Description -> Bullets) */
+.step-grid-odd {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "visual"
+    "body";
+  row-gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .step-grid-odd {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "visual header"
+      "visual body";
+    column-gap: 4rem;
+    row-gap: 0.75rem;
+  }
+}
+
+.step-grid-even {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "visual"
+    "body";
+  row-gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .step-grid-even {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header visual"
+      "body visual";
+    column-gap: 4rem;
+    row-gap: 0.75rem;
+  }
+}
+
+.step-area-header {
+  grid-area: header;
+}
+
+.step-area-visual {
+  grid-area: visual;
+  align-self: center;
+}
+
+.step-area-body {
+  grid-area: body;
+}
