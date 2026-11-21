@@ -151,7 +151,6 @@ export const termsContent: LegalPageContent = {
         "In the event of any controversy, claim, or dispute arising out of or relating to these Terms or the Service, the parties agree to first attempt in good faith to resolve the matter through informal executive consultations by contacting support@onlyfold.com.",
         "If informal consultations fail to resolve the dispute within thirty (30) days, the dispute shall be resolved through binding, confidential arbitration or conciliation administered in accordance with standard commercial arbitration rules.",
       ],
-      note: "Internal Note: Formal jurisdiction clauses should be finalized with designated legal counsel upon completion of corporate incorporation records.",
     },
     {
       id: "modifications-to-terms",

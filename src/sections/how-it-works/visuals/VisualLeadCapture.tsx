@@ -226,20 +226,15 @@ export function VisualLeadCapture() {
             <stop offset="100%" stopColor="#88E2D2" stopOpacity="0" />
           </radialGradient>
 
-          {/* Instagram Sunset Gradient */}
-          <linearGradient
-            id="instaGradient"
-            x1="0%"
-            y1="100%"
-            x2="100%"
-            y2="0%"
-          >
-            <stop offset="0%" stopColor="#FFDC80" />
-            <stop offset="25%" stopColor="#F77737" />
-            <stop offset="50%" stopColor="#F56040" />
-            <stop offset="75%" stopColor="#FD1D1D" />
-            <stop offset="100%" stopColor="#833AB4" />
-          </linearGradient>
+          {/* Official Instagram Sunset Radial Gradient */}
+          <radialGradient id="instaRadial" cx="30%" cy="105%" r="110%">
+            <stop offset="0%" stopColor="#FEE411" />
+            <stop offset="10%" stopColor="#FEDB16" />
+            <stop offset="35%" stopColor="#F85641" />
+            <stop offset="65%" stopColor="#D92E7F" />
+            <stop offset="85%" stopColor="#8A3AB9" />
+            <stop offset="100%" stopColor="#4C68D7" />
+          </radialGradient>
 
           {/* Onlyfold Brand Fold Mark Gradients */}
           <linearGradient
@@ -647,28 +642,30 @@ export function VisualLeadCapture() {
             fill="#FFFFFF"
             filter="url(#nodeShadow)"
           />
-          <g transform="translate(234, 78)">
-            <rect width="28" height="28" rx="7.5" fill="url(#instaGradient)" />
-            <rect
-              x="5.5"
-              y="5.5"
-              width="17"
-              height="17"
-              rx="4.5"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="1.8"
-            />
-            <circle
-              cx="14"
-              cy="14"
-              r="4.2"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="1.8"
-            />
-            <circle cx="19.2" cy="8.8" r="1.1" fill="#FFFFFF" />
-          </g>
+          {/* Authentic Circular Instagram Gradient Badge */}
+          <circle cx="248" cy="92" r="14" fill="url(#instaRadial)" />
+          {/* Centered Camera Outline */}
+          <rect
+            x="240.5"
+            y="84.5"
+            width="15"
+            height="15"
+            rx="4.2"
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth="1.6"
+          />
+          {/* Camera Lens */}
+          <circle
+            cx="248"
+            cy="92"
+            r="3.6"
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth="1.6"
+          />
+          {/* Flash Dot */}
+          <circle cx="252" cy="88" r="0.9" fill="#FFFFFF" />
         </g>
 
         {/* 4. Code / API (cx=44, cy=160) */}
@@ -759,10 +756,11 @@ export function VisualLeadCapture() {
             fill="#FFFFFF"
             filter="url(#nodeShadow)"
           />
+          {/* Official Facebook Circular Badge & 'f' Glyph */}
           <g transform="translate(186, 305)">
-            <circle cx="14" cy="14" r="13" fill="#1877F2" />
+            <circle cx="14" cy="14" r="14" fill="#1877F2" />
             <path
-              d="M 15.5 19 L 15.5 14.5 L 17.2 14.5 L 17.5 12.3 L 15.5 12.3 L 15.5 10.9 C 15.5 10.3 15.7 9.8 16.6 9.8 L 17.6 9.8 L 17.6 7.8 C 17.1 7.7 16.4 7.6 15.7 7.6 C 13.8 7.6 12.6 8.8 12.6 10.9 L 12.6 12.3 L 10.8 12.3 L 10.8 14.5 L 12.6 14.5 L 12.6 19 Z"
+              d="M15.42 28v-9.52h3.2l.48-3.72h-3.68V12.38c0-1.08.3-1.81 1.85-1.81h1.97V7.24c-.34-.05-1.52-.15-2.88-.15-2.85 0-4.81 1.74-4.81 4.94v2.73H9.28v3.72h3.25V28h3.89z"
               fill="#FFFFFF"
             />
           </g>

@@ -109,7 +109,6 @@ export const privacyContent: LegalPageContent = {
         "Customer Communications & Leads (Processor Role): For prospective lead information, customer phone numbers, and WhatsApp message content processed through our platform on behalf of a customer business, the customer business acts as the Data Controller (determining the legal basis and purposes of messaging). Onlyfold acts strictly as a Data Processor or Service Provider, handling such communications solely under the documented instructions and configurations of the customer business.",
         "Direct Account & Website Data (Controller Role): For business contact details of our direct customers, administrative user profiles, billing records, and direct inquiries submitted through our Website, OnlyFold AI acts as the Data Controller.",
       ],
-      note: "Internal Note: Classification is based on standard SaaS communication models. Legal counsel should verify multi-jurisdictional nuances.",
     },
     {
       id: "data-sharing-and-recipients",
